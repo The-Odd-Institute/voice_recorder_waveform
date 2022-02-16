@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var audioRecorder: AudioRecorder
+    
     var body: some View {
         NavigationView {
             VStack {
+                RecordingsList(audioRecorder: audioRecorder)
                 Spacer()
                 HStack(spacing: 16) {
-                    Button(action: {print("Stop")}) {
+                    Button(action: {self.audioRecorder.stopRecording()}) {
                         Image(systemName: "stop.circle.fill")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
@@ -21,7 +25,7 @@ struct ContentView: View {
                             .foregroundColor(.red)
                             .padding(10)
                     }
-                    Button(action: {print("Start recording")}) {
+                    Button(action: {self.audioRecorder.startRecording()}) {
                         Image(systemName: "waveform.circle.fill")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
@@ -46,7 +50,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(audioRecorder: AudioRecorder())
             .preferredColorScheme(.dark)
     }
 }

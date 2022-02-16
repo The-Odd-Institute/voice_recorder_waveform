@@ -7,18 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D31496927B90EBD00B23077 /* RecordingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31496827B90EBD00B23077 /* RecordingDataModel.swift */; };
 		7D492E7F27AC5CB80010AF02 /* AudioRecorderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D492E7E27AC5CB80010AF02 /* AudioRecorderApp.swift */; };
 		7D492E8127AC5CB80010AF02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D492E8027AC5CB80010AF02 /* ContentView.swift */; };
 		7D492E8327AC5CB90010AF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D492E8227AC5CB90010AF02 /* Assets.xcassets */; };
 		7D492E8627AC5CB90010AF02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D492E8527AC5CB90010AF02 /* Preview Assets.xcassets */; };
+		7DA9A18627BD8FEB00250AAA /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA9A18527BD8FEB00250AAA /* Helper.swift */; };
+		7DA9A18827BD910700250AAA /* RecordingsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA9A18727BD910700250AAA /* RecordingsList.swift */; };
+		7DC4E16B27B2F0EC005309B2 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC4E16A27B2F0EB005309B2 /* AudioRecorder.swift */; };
+		7DC4E16D27B2F3C1005309B2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC4E16C27B2F3C1005309B2 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D31496827B90EBD00B23077 /* RecordingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingDataModel.swift; sourceTree = "<group>"; };
 		7D492E7B27AC5CB80010AF02 /* AudioRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D492E7E27AC5CB80010AF02 /* AudioRecorderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderApp.swift; sourceTree = "<group>"; };
 		7D492E8027AC5CB80010AF02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7D492E8227AC5CB90010AF02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D492E8527AC5CB90010AF02 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7DA9A18527BD8FEB00250AAA /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		7DA9A18727BD910700250AAA /* RecordingsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingsList.swift; sourceTree = "<group>"; };
+		7DC4E16A27B2F0EB005309B2 /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		7DC4E16C27B2F3C1005309B2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +63,13 @@
 			children = (
 				7D492E7E27AC5CB80010AF02 /* AudioRecorderApp.swift */,
 				7D492E8027AC5CB80010AF02 /* ContentView.swift */,
+				7DC4E16A27B2F0EB005309B2 /* AudioRecorder.swift */,
 				7D492E8227AC5CB90010AF02 /* Assets.xcassets */,
 				7D492E8427AC5CB90010AF02 /* Preview Content */,
+				7DC4E16C27B2F3C1005309B2 /* Extensions.swift */,
+				7D31496827B90EBD00B23077 /* RecordingDataModel.swift */,
+				7DA9A18527BD8FEB00250AAA /* Helper.swift */,
+				7DA9A18727BD910700250AAA /* RecordingsList.swift */,
 			);
 			path = AudioRecorder;
 			sourceTree = "<group>";
@@ -137,8 +152,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DA9A18827BD910700250AAA /* RecordingsList.swift in Sources */,
+				7DC4E16B27B2F0EC005309B2 /* AudioRecorder.swift in Sources */,
+				7D31496927B90EBD00B23077 /* RecordingDataModel.swift in Sources */,
 				7D492E8127AC5CB80010AF02 /* ContentView.swift in Sources */,
 				7D492E7F27AC5CB80010AF02 /* AudioRecorderApp.swift in Sources */,
+				7DC4E16D27B2F3C1005309B2 /* Extensions.swift in Sources */,
+				7DA9A18627BD8FEB00250AAA /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,11 +292,13 @@
 				DEVELOPMENT_TEAM = 75MFN5S8CZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app needs access to your microphone to work properly.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,11 +323,13 @@
 				DEVELOPMENT_TEAM = 75MFN5S8CZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app needs access to your microphone to work properly.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
